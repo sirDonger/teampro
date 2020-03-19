@@ -9,8 +9,6 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 })
 export class LandingComponent implements OnInit {
 
- 
-
   servicesData = [
     {
       'image':  'http://s8.staging-host.com/xpbid/images/profile1.jpg',
@@ -50,7 +48,6 @@ export class LandingComponent implements OnInit {
     },
   ];
 
-
   carouselOptions = {
     margin: 25,
     nav: true,
@@ -59,32 +56,33 @@ export class LandingComponent implements OnInit {
       0: {
         loop: true,
         items: 1,
-        nav: true
+        nav: true,
+        autoplay:true,
       },
       600: {
         loop: true,
         items: 1,
-        nav: true
+        nav: true,
+        autoplay:true,
       },
       1000: {
         items: 2,
         nav: true,
         loop: true,
+        autoplay:true,
       },
       1500: {
         items: 2,
         nav: true,
         loop: true,
+        autoplay:true,
       }
     }
   }
 
-
   constructor(public dialog: MatDialog) {}
 
   ngOnInit() {}
-
-  
 
   openDetailDBx(service): void {
     const dialogRef = this.dialog.open(ServicedialogboxComponent, {
@@ -93,8 +91,7 @@ export class LandingComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed result ', result);
-       
+      console.log('The dialog was closed result ', result);  
     });
   }
   
