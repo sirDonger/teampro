@@ -1,0 +1,212 @@
+<header>
+  <div class="container-fluid header_main login_header" id="navbar">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href=""
+          ><img
+            src="../assets/images/logo1.png"
+            width="120"
+            height="49"
+            class="logo_for_desk"
+            alt="logo"/>
+          <img
+            src="../assets/images/logo_small.png"
+            width="45"
+            height="34"
+            class="logo_for_mobile"
+            alt="logo"
+        /></a>
+
+        <button
+          class="navbar-toggler navbar-toggler-right collapsed"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapsingNavbar"
+        >
+          <span> </span> <span> </span> <span> </span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsingNavbar">
+          <ul class="navbar-nav mr-auto" *ngIf="!role">
+            <li class="nav-item active">
+              <a class="nav-link" href="#categories">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#how-itworks">How it works</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="javascript:;"
+                (click)="router.navigate(['account/register'])"
+                >Register
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="javascript:;"
+                (click)="router.navigate(['account/login'])"
+              >
+                Login
+              </a>
+            </li>
+          </ul>
+          <!-- TODO:bind auth user info -->
+          <ul class="navbar-nav mr-auto" *ngIf="role === 'provider'">
+            <li class="nav-item ">
+              <a
+                class="nav-link "
+                [routerLink]="['/provider']"
+                routerLinkActive="router-link-active"
+                >Matching Projects
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [routerLink]="['/provider/livebids']"
+                routerLinkActive="router-link-active"
+              >
+                Manage Bids
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [routerLink]="['/provider/messages']"
+                routerLinkActive="router-link-active"
+                >Messages
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [routerLink]="['/provider/calendar']"
+                routerLinkActive="router-link-active"
+                >Calendar</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link "
+                [routerLink]="['/provider']"
+                routerLinkActive="router-link-active"
+              >
+                Payments
+              </a>
+            </li>
+            <li class="nav-item for_mobile_m">
+              <a
+                class="nav-link"
+                [routerLink]="['/provider']"
+                routerLinkActive="router-link-active"
+                >Setting</a
+              >
+            </li>
+            <li class="nav-item for_mobile_m">
+              <a
+                class="nav-link"
+                [routerLink]="['/provider']"
+                routerLinkActive="router-link-active"
+                >Help</a
+              >
+            </li>
+            <li class="nav-item for_mobile_m">
+              <a
+                class="nav-link"
+                [routerLink]="['/provider']"
+                routerLinkActive="router-link-active"
+              >
+                View Tutorials
+              </a>
+            </li>
+            <li class="nav-item for_mobile_m">
+              <a
+                class="nav-link"
+                [routerLink]="['/provider']"
+                routerLinkActive="router-link-active"
+                class="logout"
+              >
+                Logout
+              </a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav mr-auto" *ngIf="role === 'consumer'">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [routerLink]="['/consumer/post']"
+                routerLinkActive="router-link-active"
+                >My Posts
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [routerLink]="['/consumer/messages']"
+                routerLinkActive="router-link-active"
+                >Messages
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [routerLink]="['/consumer/calendar']"
+                routerLinkActive="router-link-active"
+                >Calendar</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [routerLink]="['/consumer/payments']"
+                routerLinkActive="router-link-active"
+              >
+                Payments
+              </a>
+            </li>
+            <li class="nav-item for_mobile_m">
+              <a
+                class="nav-link"
+                [routerLink]="['/consumer/setting']"
+                routerLinkActive="router-link-active"
+                >Setting</a
+              >
+            </li>
+            <li class="nav-item for_mobile_m">
+              <a
+                class="nav-link"
+                [routerLink]="['/consumer/help']"
+                routerLinkActive="router-link-active"
+                >Help</a
+              >
+            </li>
+            <li class="nav-item for_mobile_m">
+              <a
+                class="nav-link"
+                [routerLink]="['/consumer/tutorials']"
+                routerLinkActive="router-link-active"
+              >
+                View Tutorials
+              </a>
+            </li>
+            <li class="nav-item for_mobile_m">
+              <a
+                class="nav-link"
+                [routerLink]="['/consumer/logout']"
+                routerLinkActive="router-link-active"
+                class="logout"
+              >
+                Logout
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="rightside">
+        <strong>Call us</strong> <a href="tel:855-429-7340"> 855-429-7340</a>
+      </div>
+    </div>
+  </div>
+</header>

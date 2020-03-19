@@ -1,0 +1,136 @@
+.footer_sec {
+  background: url(assets/images/footer_bg.jpg) left bottom no-repeat;
+  padding-top: 52px;
+  padding-bottom: 22px;
+
+  @include breakpoint (xxlarge) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include breakpoint (small) {
+    background-size: cover;
+  }
+
+  h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fe4e1d;
+    padding-bottom: 13px;
+    background: url(assets/images/hover_bg.png) left bottom no-repeat;
+    background-size: 43px 6px;
+  }
+
+  .footer_video {
+    float: left;
+    width: 100%;
+    margin-top: 7px;
+    margin-bottom: 8px;
+
+    .footer_video_l {
+      float: left;
+      width: 34px;
+      margin-right: 9px;
+    }
+
+    .footer_video_R {
+      float: right;
+      width: calc(100% - 45px);
+
+      p {
+        font-size: 14px;
+        color: #adadad;
+        line-height: 17px;
+        margin-bottom: 0;
+
+        i {
+          display: block;
+        }
+      }
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style: none;
+      padding: 0 0 3px 0;
+
+      a {
+        color: #adadad;
+        font-size: 14px;
+        font-family: $dec-font;
+        font-weight: 500;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .copy {
+    font-size: 14px;
+    color: #adadad;
+  }
+
+  ul.social {
+    display: flex;
+    padding: 0px;
+    margin: 35px 0 5px 0px;
+    list-style: none;
+
+    li {
+      margin-right: 10px;
+
+      a {
+        background-image: url("assets/images/social_sprite.png");
+        background-color: rgba(0, 0, 0, 0);
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        display: inline-block;
+        float: none;
+        transition: all 0.25s ease;
+        width: 30px;
+        height: 30px;
+
+        &.fb_icon {
+          background-position: 0 0;
+
+          &:hover {
+            background-position: 0 -30px;
+          }
+        }
+
+        &.twitter_icon {
+          background-position: -33px 0px;
+
+          &:hover {
+            background-position: -33px -30px;
+          }
+        }
+
+        &.youtube_icon {
+          background-position: -70px 0px;
+
+          &:hover {
+            background-position: -70px -30px;
+          }
+        }
+
+        &.link_icon {
+          background-position: -108px 0px;
+
+          &:hover {
+            background-position: -108px -30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer_box {
+  @include breakpoint (small) {
+    margin-bottom: 20px;
+  }
+}

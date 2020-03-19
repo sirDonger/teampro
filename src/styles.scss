@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "assets/scss/base/_variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import "assets/scss/base/theme";
+@import "assets/scss/base/_mixins";
+@import "assets/scss/base/_variables";
+@import "assets/scss/base/_base";
+
+mat-form-field {
+  width: 100%;
+}
