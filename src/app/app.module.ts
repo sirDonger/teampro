@@ -16,6 +16,8 @@ import { appRoutes } from './app-routing';
 import { LandingComponent } from './landing/landing.component';
 import { NgModule } from '@angular/core';
 
+import { OwlModule } from 'ngx-owl-carousel';
+
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -29,6 +31,7 @@ import { NgModule } from '@angular/core';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
+    OwlModule,
     RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules })
   ],
 

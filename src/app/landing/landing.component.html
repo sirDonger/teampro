@@ -35,106 +35,39 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
 <div class="container-fluid team">
   <div class="container">
     <div class="text-center team_hd">
       <h3> Now you can receive</h3>
       <h2>Live Bids From Service Professionals!</h2>
     </div>
-    <div id="owl-1" class="owl-carousel owl-theme owl-loaded owl-drag">
-               
-               
-               
-      <div class="owl-stage-outer"><div class="owl-stage" style="width: 4127px; transform: translate3d(-1768px, 0px, 0px); transition: all 0.25s ease 0s;"><div class="owl-item cloned" style="width: 569.5px; margin-right: 20px;"><div class="item">
-            <div class="profile_sec">
-               <div class="pro_1">
-                  <img src="images/profile1.jpg" alt="profile">
-               </div>
-               <div class="des">
-                  <h3>John Lennon <br> <span>Electronic Service Provider </span></h3>
-                  <p class="common_p"> This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin</p>
-                  <a href="#" data-toggle="modal" data-target="#exampleModal"> Read More </a>
-               </div>
-            </div>
-         </div></div><div class="owl-item cloned" style="width: 569.5px; margin-right: 20px;"><div class="item">
-            <div class="profile_sec">
-               <div class="pro_1">
-                  <img src="images/profile2.jpg" alt="profile">
-               </div>
-               <div class="des">
-                  <h3>John Lennon <br> <span>Electronic Service Provider </span></h3>
-                  <p class="common_p"> This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin</p>
-                  <a href="#" data-toggle="modal" data-target="#exampleModal"> Read More </a>
-               </div>
-            </div>
-         </div></div><div class="owl-item" style="width: 569.5px; margin-right: 20px;"><div class="item">
-            <div class="profile_sec">
-               <div class="pro_1">
-                  <img src="images/profile1.jpg" alt="profile">
-               </div>
-               <div class="des">
-                  <h3>John Lennon <br> <span>Electronic Service Provider </span></h3>
-                  <p class="common_p"> This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin</p>
-                  <a href="#" data-toggle="modal" data-target="#exampleModal"> Read More </a>
-               </div>
-            </div>
-         </div></div><div class="owl-item active" style="width: 569.5px; margin-right: 20px;"><div class="item">
-            <div class="profile_sec">
-               <div class="pro_1">
-                  <img src="images/profile1.jpg" alt="profile">
-               </div>
-               <div class="des">
-                  <h3>John Lennon <br> <span>Electronic Service Provider </span></h3>
-                  <p class="common_p"> This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin</p>
-                  <a href="#" data-toggle="modal" data-target="#exampleModal"> Read More </a>
-               </div>
-            </div>
-         </div></div><div class="owl-item active" style="width: 569.5px; margin-right: 20px;"><div class="item">
-            <div class="profile_sec">
-               <div class="pro_1">
-                  <img src="images/profile2.jpg" alt="profile">
-               </div>
-               <div class="des">
-                  <h3>John Lennon <br> <span>Electronic Service Provider </span></h3>
-                  <p class="common_p"> This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin</p>
-                  <a href="#" data-toggle="modal" data-target="#exampleModal"> Read More </a>
-               </div>
-            </div>
-         </div></div><div class="owl-item cloned" style="width: 569.5px; margin-right: 20px;"><div class="item">
-            <div class="profile_sec">
-               <div class="pro_1">
-                  <img src="images/profile1.jpg" alt="profile">
-               </div>
-               <div class="des">
-                  <h3>John Lennon <br> <span>Electronic Service Provider </span></h3>
-                  <p class="common_p"> This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin</p>
-                  <a href="#" data-toggle="modal" data-target="#exampleModal"> Read More </a>
-               </div>
-            </div>
-         </div></div><div class="owl-item cloned" style="width: 569.5px; margin-right: 20px;"><div class="item">
-            <div class="profile_sec">
-               <div class="pro_1">
-                  <img src="images/profile1.jpg" alt="profile">
-               </div>
-               <div class="des">
-                  <h3>John Lennon <br> <span>Electronic Service Provider </span></h3>
-                  <p class="common_p"> This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin</p>
-                  <a href="#" data-toggle="modal" data-target="#exampleModal"> Read More </a>
-               </div>
-            </div>
+
+    
+    <owl-carousel
+     
+     [options]="carouselOptions"
+     >
+     <div class="item" *ngFor="let service of servicesData;let i = index">
+      <div class="profile_sec">
+         <div class="pro_1">
+            <img [src]="service.image" alt="profile">
          </div>
-        </div>
+         <div class="des">
+            <h3>John Lennon <br> <span>Electronic Service Provider </span></h3>
+            <p class="common_p"> This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin</p>
+            <a href="#" data-toggle="modal" data-target="#exampleModal"> Read More </a>
+         </div>
       </div>
     </div>
-    <div class="owl-nav disabled">
-      <button type="button" role="presentation" class="owl-prev">
-        <span aria-label="Previous">‹</span>
-      </button>
-      <button type="button" role="presentation" class="owl-next">
-        <span aria-label="Next">›</span>
-      </button>
-    </div>
-  </div>
+    </owl-carousel>
+ 
+
   </div>
 </div>
 <div id="how-itworks" class="container-fluid how-it-works">

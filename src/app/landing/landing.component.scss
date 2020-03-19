@@ -1302,3 +1302,60 @@ h6 {
     margin: 0px 20px 0px 20px;
   }
 }
+
+
+
+
+::ng-deep .owl-nav {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1555;
+  display: block !important;
+
+  @media (max-width: 1024px){
+    display: none !important;
+  }
+
+  .owl-prev {
+    position: relative;
+    left: -50px;
+    top: 0px;
+    float: left;
+    width: 40px;
+    height: 40px;
+
+    span{ display: none; }
+    &:before  {
+      position: absolute;
+      width: 20px;
+      left: 0;
+      height: 38px;
+      background: url(/assets/images/pre_arrow.png) no-repeat;
+      background-size: 100%;
+      content: "";
+      top: 0;
+    }
+  }
+
+  .owl-next {
+    position: relative;
+    right: -50px;
+    top: 0px;
+    float: right;
+    width: 40px;
+    height: 40px;
+    span{ display: none; }
+    &:before {
+      position: absolute;
+      width: 20px;
+      right: 0;
+      height: 38px;
+      background: url(/assets/images/next_arrow.png) no-repeat;
+      background-size: 100%;
+      content: "";
+      top: 0;
+    }
+  }
+}
