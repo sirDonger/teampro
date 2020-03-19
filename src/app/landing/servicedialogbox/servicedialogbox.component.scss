@@ -1,0 +1,24 @@
+.mat_header {
+    padding-bottom: 0.6rem;
+    text-align: right;
+    cursor: pointer;
+    border-bottom: 1px solid #e9ecef;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    span{font-size: 20px;}
+}
+.des{
+    margin-top: 20px;
+    max-width: 400px;
+}
+.profile_sec .des h3 {
+    font-size: 18px;
+    font-weight: 600;
+    span {
+        font-size: 15px;
+        color: #ef3500;
+        font-style: italic;
+    }
+}
+
+ 

@@ -586,3 +586,15 @@ header {
   background: #fff;
   top: 0;
 }
+
+// ::ng-deep html.cdk-global-scrollblock .header_main {
+//   position: fixed;
+//   background: #fff;
+//   top: 0;
+// }
+
+::ng-deep .cdk-global-scrollblock {
+	position: initial;
+	width: initial;
+	overflow: hidden;
+}

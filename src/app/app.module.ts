@@ -17,6 +17,7 @@ import { LandingComponent } from './landing/landing.component';
 import { NgModule } from '@angular/core';
 
 import { OwlModule } from 'ngx-owl-carousel';
+import { ServicedialogboxComponent } from './landing/servicedialogbox/servicedialogbox.component';
 
 @NgModule({
   imports: [
@@ -34,8 +35,8 @@ import { OwlModule } from 'ngx-owl-carousel';
     OwlModule,
     RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules })
   ],
-
-  declarations: [AppComponent, LandingComponent],
+  entryComponents: [ServicedialogboxComponent],
+  declarations: [AppComponent, LandingComponent, ServicedialogboxComponent],
 
   providers: [],
 

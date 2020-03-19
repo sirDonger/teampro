@@ -1,0 +1,22 @@
+ 
+<div class="mat_header"><span (click)="onNoClick()">×</span></div>
+
+
+<div class="modal-body profile_sec text-center">
+  <div class="pro_1"><img [src]="data.image" alt="profile"></div>
+  <div class="des">
+    <h3>{{data.name}}<br>
+      <span>{{data.job}}</span>
+    </h3>
+    <p class="common_p">{{data.comment}}</p>
+  </div>
+</div>
+
+
+<!-- <h1 mat-dialog-title>Hi {{data | json }}</h1>
+<div mat-dialog-content>
+  <p>What's your favorite animal?</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button >No Thanks</button>
+</div> -->

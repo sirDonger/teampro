@@ -1,4 +1,6 @@
+import { ServicedialogboxComponent } from './servicedialogbox/servicedialogbox.component';
 import { Component, OnInit } from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
   selector: 'xb-landing',
@@ -78,7 +80,22 @@ export class LandingComponent implements OnInit {
   }
 
 
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit() {}
+
+  
+
+  openDetailDBx(service): void {
+    const dialogRef = this.dialog.open(ServicedialogboxComponent, {
+      // width: '250px',
+      data: service
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed result ', result);
+       
+    });
+  }
+  
 }
