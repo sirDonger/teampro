@@ -128,7 +128,7 @@ export class LandingComponent implements OnInit {
     private apiService: ApiService) {}
 
   ngOnInit() {
-    this.apiService.getAllCategories().subscribe(response =>  this.categories = response);
+    this.apiService.getAllCategories(true).subscribe(response =>  this.categories = response);
   }
 
   openDetailDBx(service): void {

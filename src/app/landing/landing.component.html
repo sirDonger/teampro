@@ -106,7 +106,7 @@
         <div class="category">
           <div class="cate_img"> <img [src]="category.thumb" class="img-fluid" alt="category_image">
           </div>
-          <div class="overlay"><a href=""> {{category.title}} </a> </div>
+          <div class="overlay"><a [routerLink]="['/category',category.id]" > {{category.title}} </a> </div>
         </div>
       </div>
 

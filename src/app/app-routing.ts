@@ -8,10 +8,13 @@ import { PageNotFoundComponent } from './core/error/page-not-found.component';
 export const appRoutes: Routes = [
   { path: '', pathMatch: 'full', component: LandingComponent },
   { path: 'xpb', pathMatch: 'full', component: LandingComponent },
-
   { path: 'error', component: ErrorComponent },
-
   { path: '401', pathMatch: 'full', component: NoAccessComponent }, // NO ACCESS
   { path: '404', pathMatch: 'full', component: PageNotFoundComponent }, // NOT FOUND
+   {
+    path: 'category',
+    loadChildren: './category/category.module#CategoryModule'
+  },
+
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent }
 ];
