@@ -152,10 +152,9 @@
 
 <div class="container-fluid security_sec ">
   <div class="container">
-    <div class=" text-center sec_icon"> <img src="../assets/images/security.png" alt="icon"> </div>
+    <div class=" text-center sec_icon"> <img src="../assets/images/escrow.jpg" alt="icon" class="w-100"> </div>
     <div class=" text-center sec_text">
-      <h3> We safegaurd Your project from counterparty risk</h3>
-      <p class="common_p">Your payments are 100% safe with the Most trusted and Licensed payment escrow in the world</p>
+      <p class="common_p">Our partnership with Escrow.com makes your project 100% safe with the most trusted and licensed payment escrow in the world</p>
     </div>
     <div class="text-center Sec_btn">
       <a href="">Let's Get Started </a>
@@ -167,11 +166,10 @@
     <div class=" text-center sec_icon"> </div>
     <div class=" text-center sec_text">
       <h3> Get Your Projects Funded</h3>
+      <p class="common_p">Compare up to 5 personal loan offers from multiple lenders in minutes through</p>
     </div>
     <div class="text-center">
-      <a href="http://lendingtree.com" target="_blank"><img src="../assets/images/lendingtree/LT_logo_2018_Gradient_White.png" width="273" height="100" alt="logo" /></a> 
-      <a href="http://sofi.com" target="_blank"><img src="../assets/images/SoFi_logo_white.png" width="200" height="75" alt="logo"/></a>
-      <a href="http://upstart.com" target="_blank"><img src="../assets/images/upstart_logo_original.png" width="360" height="75" alt="logo"/></a>
+      <a href="http://lendingtree.com" target="_blank"><img src="../assets/images/lendingtree/LT_logo_2018_Gradient_White.png" width="273" height="100" alt="logo" /></a>
     </div>
   </div>
 </div>
@@ -183,86 +181,14 @@
     </div>
     <div class="container testimo-sec">
       <div class="center slider responsive">
-        <div>
+        <div *ngFor="let item of items;">
           <div class="main_sec_test">
             <div class="top_sec">
-              <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
-                sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
+              <p>{{item.content}}</p>
             </div>
             <div class="bottom_sec">
-              <span class="bottom_secL"><img src="../assets/images/reviewdp1.jpg" alt="pic" /> </span>
               <span class="bottom_secR">
-                <span class="text_name">Keith Williams<br><span>California</span></span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="main_sec_test">
-            <div class="top_sec">
-              <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
-                sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
-            </div>
-            <div class="bottom_sec">
-              <span class="bottom_secL"><img src="../assets/images/reviewdp2.jpg" alt="pic" /> </span>
-              <span class="bottom_secR">
-                <span class="text_name">Taylor Swift<br><span>Australia</span></span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="main_sec_test">
-            <div class="top_sec">
-              <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
-                sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
-            </div>
-            <div class="bottom_sec">
-              <span class="bottom_secL"><img src="../assets/images/reviewdp3.jpg" alt="pic" /> </span>
-              <span class="bottom_secR">
-                <span class="text_name">Daniel Hall<br><span>New York</span></span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="main_sec_test">
-            <div class="top_sec">
-              <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
-                sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
-            </div>
-            <div class="bottom_sec">
-              <span class="bottom_secL"><img src="../assets/images/reviewdp1.jpg" alt="pic" /> </span>
-              <span class="bottom_secR">
-                <span class="text_name">Keith Williams<br><span>California</span></span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="main_sec_test">
-            <div class="top_sec">
-              <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
-                sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
-            </div>
-            <div class="bottom_sec">
-              <span class="bottom_secL"><img src="../assets/images/reviewdp2.jpg" alt="pic" /> </span>
-              <span class="bottom_secR">
-                <span class="text_name">Taylor Swift<br><span>Australia</span></span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="main_sec_test">
-            <div class="top_sec">
-              <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
-                sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
-            </div>
-            <div class="bottom_sec">
-              <span class="bottom_secL"><img src="../assets/images/reviewdp3.jpg" alt="pic" /> </span>
-              <span class="bottom_secR">
-                <span class="text_name">Daniel Hall<br><span>New York</span></span>
+                <span class="text_name">{{item.name}}<br><span>{{item.location}}</span></span>
               </span>
             </div>
           </div>

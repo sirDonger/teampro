@@ -48,6 +48,44 @@ export class LandingComponent implements OnInit {
     },
   ];
 
+  items = [
+    {
+      'content': `This is Photoshop\'s version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+      sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.`,
+      'name': 'Keith Williams',
+      'location': 'California'
+    },
+    {
+      'content': `This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+      sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.`,
+      'name': 'Taylor Swift',
+      'location': 'Australia'
+    },
+    {
+      'content': `This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+      sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.`,
+      'name': 'Daniel Hall',
+      'location': 'New York'
+    },{
+      'content': `This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+      sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.`,
+      'name': 'Keith Williams',
+      'location': 'California'
+    },
+    {
+      'content': `This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+      sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.`,
+      'name': 'Taylor Swift',
+      'location': 'Australia'
+    },
+    {
+      'content': `This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+      sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.`,
+      'name': 'Daniel Hall',
+      'location': 'New York'
+    },
+  ];
+  
   carouselOptions = {
     margin: 25,
     nav: true,
