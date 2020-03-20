@@ -1364,3 +1364,23 @@ h6 {
 .category_out .row {
   margin-bottom: 30px;
 }
+
+/////////////New work/////////////
+
+::ng-deep .nsm-dialog-btn-close > svg{
+  color: #dd4813;
+  border-radius: 100px;
+  vertical-align: top!important;
+}
+
+::ng-deep .nsm-content{
+  width: fit-content;
+}
+
+::ng-deep .nsm-body{
+  margin-top: 20px;
+}
+
+a{
+  cursor: pointer;
+}

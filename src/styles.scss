@@ -7,7 +7,10 @@
 @import "assets/scss/base/_mixins";
 @import "assets/scss/base/_variables";
 @import "assets/scss/base/_base";
+
 @import "assets/scss/base/_common";
+
+@import "~ngx-smart-modal/ngx-smart-modal";
 
 mat-form-field {
   width: 100%;
