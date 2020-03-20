@@ -99,8 +99,19 @@
       <p class="common_p"> Our platform empowers you to find and choose the right service provider for your project
         either small or<br> complex. We want to make the process of repair, installation and services easy for you.</p>
     </div>
-    <div class="row">
-      <div class="col col1 catgory_box">
+
+
+    <div class="row" *ngFor="let categoryRow of categories">
+      <div class="col col{{i+1}} catgory_box" *ngFor="let category of categoryRow; let i = index;">
+        <div class="category">
+          <div class="cate_img"> <img [src]="category.thumb" class="img-fluid" alt="category_image">
+          </div>
+          <div class="overlay"><a href=""> {{category.title}} </a> </div>
+        </div>
+      </div>
+
+      
+      <!-- <div class="col col1 catgory_box">
         <div class="category">
           <div class="cate_img"> <img src="../assets/images/category_1.jpg" class="img-fluid" alt="category_image">
           </div>
@@ -142,8 +153,10 @@
             <a href=""> Automotive </a>
           </div>
         </div>
-      </div>
+      </div> -->
+
     </div>
+    
     <div class="text-center all_cete_btn">
       <a href="categories.html">See All Categories </a>
     </div>

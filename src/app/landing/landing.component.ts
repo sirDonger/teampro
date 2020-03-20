@@ -1,3 +1,5 @@
+import { Categories } from './../shared/_models/category.model';
+import { ApiService } from './../shared/_services/api.service';
 import { ServicedialogboxComponent } from './servicedialogbox/servicedialogbox.component';
 import { Component, OnInit } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
@@ -117,10 +119,17 @@ export class LandingComponent implements OnInit {
       }
     }
   }
+  
+  categories: Categories[]; 
 
-  constructor(public dialog: MatDialog) {}
 
-  ngOnInit() {}
+  constructor(
+    public dialog: MatDialog,
+    private apiService: ApiService) {}
+
+  ngOnInit() {
+    this.apiService.getAllCategories().subscribe(response =>  this.categories = response);
+  }
 
   openDetailDBx(service): void {
     const dialogRef = this.dialog.open(ServicedialogboxComponent, {
