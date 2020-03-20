@@ -1,0 +1,284 @@
+@import '../../assets/scss/base/variables';
+@import '../../assets/scss/base/mixins';
+
+body {
+  background-color: #fff;
+}
+
+.main_banner {
+  background: url(../../assets/images/contact-banner.jpg) top center no-repeat;
+  min-height: 350px;
+  background-size: cover;
+  display: flex;
+  align-content: center;
+  align-items: center;
+
+  @include breakpoint(xxlarge) {
+    min-height: 250px;
+    background-position: 39% !important;
+  }
+
+  @include breakpoint(large) {
+    min-height: 150px;
+  }
+
+  @include breakpoint(small) {
+    min-height: 100px;
+    background-position: 35% !important;
+  }
+
+  .banner_text {
+    margin-top: -30px;
+
+    h5 {
+      font-size: 22px;
+      font-weight: 600;
+
+      @include breakpoint(large) {
+        font-size: 20px;
+      }
+
+      @include breakpoint(small) {
+        font-size: 16px;
+      }
+    }
+
+    h1 {
+      font-size: 38px;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: #f45117;
+
+      @include breakpoint(large) {
+        font-size: 25px;
+      }
+
+      @include breakpoint(small) {
+        font-size: 20px;
+      }
+    }
+
+    .carousel h2 {
+      font-size: 24px;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      @include breakpoint(large) {
+        font-size: 20px;
+      }
+
+      @include breakpoint(small) {
+        font-size: 16px;
+      }
+
+      @include breakpoint(x-small) {
+        font-size: 15px;
+      }
+    }
+
+    a {
+      font-size: 14px;
+      text-decoration: none;
+      color: #ffff;
+      background-color: #000;
+      padding: 11px 23px;
+      border-radius: 28px;
+      margin-top: 16px;
+      display: table;
+
+      &:hover {
+        background-color: #f45117;
+        transition: all ease 0.1s;
+      }
+    }
+  }
+}
+
+.download_app {
+  background: url(../../assets/images/download_bg.jpg);
+  background-size: cover;
+  padding: 50px 0;
+
+  .download_hd {
+    h3 {
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 2px;
+
+      @include breakpoint(x-small) {
+        font-size: 16px;
+      }
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #fff;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 0px;
+
+      @include breakpoint(x-small) {
+        font-size: 16px;
+      }
+    }
+
+    .common_p {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 0px;
+    }
+  }
+
+  ul {
+    padding-left: 0;
+    margin-top: 27px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+
+    li {
+      display: inline-block;
+      padding: 0 8px;
+
+      a {
+        img {
+          @include breakpoint(x-small) {
+            width: 95%;
+          }
+        }
+      }
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.how-it-works {
+  padding-top: 90px;
+  margin-bottom: 45px;
+
+  @include breakpoint(small) {
+    padding-top: 30px;
+    margin-bottom: 25px;
+  }
+
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #333;
+    position: relative;
+
+    @include breakpoint(x-small) {
+      font-size: 16px;
+    }
+
+    span {
+      color: #ef3500;
+    }
+
+    &:after {
+      background: url(../../assets/images/heading_style.png);
+      content: '';
+      position: absolute;
+      width: 70px;
+      height: 3px;
+      left: 50%;
+      top: 36px;
+      transform: translateX(-50%);
+    }
+  }
+
+  .bottom_sec {
+    margin-top: 50px;
+
+    .slide-right {
+      color: #505050;
+      display: inline-block;
+      width: 16%;
+      position: relative;
+      vertical-align: top;
+      text-align: center;
+
+      @include breakpoint(medium) {
+        margin-bottom: 20px;
+
+        &:nth-child(4) {
+          &:before {
+            display: none;
+          }
+        }
+      }
+
+      @media (max-width: 580px) {
+        width: 33.3333%;
+      }
+
+      @include breakpoint(x-small) {
+        width: 100%;
+      }
+
+      h4 {
+        font-size: 14px;
+        color: #333;
+        line-height: 24px;
+        margin-top: 12px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: -33px;
+        top: 43px;
+        height: 13px;
+        width: 64px;
+        background: url(../../assets/images/works-arrow.png) no-repeat;
+        background-size: 100%;
+
+        @include breakpoint(medium) {
+          width: 54px;
+          height: 11px;
+        }
+
+        @include breakpoint(x-small) {
+          display: none;
+        }
+      }
+
+      &:first-child:before {
+        display: none;
+      }
+    }
+  }
+}
+
+.video-title {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+::ng-deep .nsm-dialog-btn-close > svg{
+  color: #dd4813;
+  border-radius: 100px;
+  vertical-align: top!important;
+}
+
+::ng-deep .nsm-content{
+  width: fit-content;
+}
+
+::ng-deep .nsm-body{
+  margin-top: 20px;
+}
+
+a{
+  cursor: pointer;
+}
