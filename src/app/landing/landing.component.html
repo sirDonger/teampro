@@ -181,7 +181,7 @@
         </div>
       </div>
       <div class="second_sec">
-        <div class="col-lg-12" *ngFor="let video of videos | slice:4:5;">
+        <div class="col-lg-12" *ngFor="let video of videos | slice:12:13;">
           <a (click)="loadPreview(video)">
             <div class="thumnail-img thump1">
               <img src={{video.thumb}} />
@@ -194,7 +194,7 @@
           frameborder="0" allowfullscreen allow="autoplay"></iframe>
       </ngx-smart-modal>
       <div class="text-center Sec_btn">
-        <a [routerLink]="['/all-videos']">See All Videos</a>
+        <a href="/all-videos">See All Videos</a>
       </div>
     </div>
   </div>

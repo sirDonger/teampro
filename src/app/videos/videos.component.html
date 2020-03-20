@@ -1,0 +1,38 @@
+<div class="container-fluid main_banner">
+  <div class="container">
+    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 banner_text">
+      <h5>Watch Videos</h5>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div id="how-itworks" class="container-fluid how-it-works">
+    <div class="row">
+      <div *ngFor="let video of videos | slice:0:12;" class="col-sm-3">
+        <a (click)="loadPreview(video)">
+          <div class="card">
+            <img class="card-img-top" src="../assets/images/thumb.png" alt="Card image cap">
+          </div>
+        </a>
+        <p class="video-title">Test Title</p>
+      </div>
+    </div>
+    <ngx-smart-modal #videoModal [identifier]="'videoModal'" [customClass]="'medium-modal'">
+      <iframe #rickroll width="550" height="420" src="https://www.youtube.com/embed/yAoLSRbwxL8?autoplay=1"
+        frameborder="0" allowfullscreen allow="autoplay"></iframe>
+    </ngx-smart-modal>
+  </div>
+</div>
+<div class="download_app">
+  <div class="container">
+    <div class="text-center download_hd">
+      <h3> Welcome to XpBids</h3>
+      <h2>Download our App it’s FREE</h2>
+      <p class="common_p">Now you can receive live bids</p>
+    </div>
+    <ul>
+      <li> <a href="#"> <img alt="pic" src="../assets/images/apple_store.png"></a></li>
+      <li> <a href="#"> <img alt="pic" src="../assets/images/google_play.png"></a></li>
+    </ul>
+  </div>
+</div>

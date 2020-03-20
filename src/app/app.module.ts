@@ -20,6 +20,7 @@ import { OwlModule } from 'ngx-owl-carousel';
 import { ServicedialogboxComponent } from './landing/servicedialogbox/servicedialogbox.component';
 
 import { NgxSmartModalModule } from 'ngx-smart-modal';
+import { VideosComponent } from './videos/videos.component';
 
 @NgModule({
   imports: [
@@ -39,7 +40,7 @@ import { NgxSmartModalModule } from 'ngx-smart-modal';
     NgxSmartModalModule.forRoot()
   ],
   entryComponents: [ServicedialogboxComponent],
-  declarations: [AppComponent, LandingComponent, ServicedialogboxComponent,],
+  declarations: [AppComponent, LandingComponent, ServicedialogboxComponent, VideosComponent,],
 
   providers: [],
 
