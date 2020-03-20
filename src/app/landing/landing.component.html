@@ -43,18 +43,18 @@
       <h2>Live Bids From Service Professionals!</h2>
     </div>
     <owl-carousel [options]="carouselOptions">
-     <div class="item" *ngFor="let service of servicesData;let i = index">
-      <div class="profile_sec">
-         <div class="pro_1">
+      <div class="item" *ngFor="let service of servicesData;let i = index">
+        <div class="profile_sec">
+          <div class="pro_1">
             <img [src]="service.image" alt="profile">
-         </div>
-         <div class="des">
+          </div>
+          <div class="des">
             <h3>{{service.name}} <br> <span>{{service.job}} </span></h3>
             <p class="common_p">{{service.comment}}</p>
             <a (click)="openDetailDBx(service)" class="cursor"> Read More </a>
-         </div>
+          </div>
+        </div>
       </div>
-    </div>
     </owl-carousel>
   </div>
 </div>
@@ -154,7 +154,8 @@
   <div class="container">
     <div class=" text-center sec_icon"> <img src="../assets/images/escrow.jpg" alt="icon" class="w-100"> </div>
     <div class=" text-center sec_text">
-      <p class="common_p">Our partnership with Escrow.com makes your project 100% safe with the most trusted and licensed payment escrow in the world</p>
+      <p class="common_p">Our partnership with Escrow.com makes your project 100% safe with the most trusted and
+        licensed payment escrow in the world</p>
     </div>
     <div class="text-center Sec_btn">
       <a href="">Let's Get Started </a>
@@ -169,7 +170,8 @@
       <p class="common_p">Compare up to 5 personal loan offers from multiple lenders in minutes through</p>
     </div>
     <div class="text-center">
-      <a href="http://lendingtree.com" target="_blank"><img src="../assets/images/lendingtree/LT_logo_2018_Gradient_White.png" width="273" height="100" alt="logo" /></a>
+      <a href="http://lendingtree.com" target="_blank"><img
+          src="../assets/images/lendingtree/LT_logo_2018_Gradient_White.png" width="273" height="100" alt="logo" /></a>
     </div>
   </div>
 </div>
@@ -197,37 +199,34 @@
     </div>
   </div>
 </div>
-
 <div class="container-fluid video_sec">
   <div class="container">
     <h2 class="text-center">Watch <span>Videos</span> </h2>
     <div class="vid row">
       <div class="first_sec row">
-        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 first_sec_box">
-          <iframe height="223" src="https://www.youtube.com/embed/yAoLSRbwxL8" allow="autoplay; encrypted-media"
-            allowfullscreen></iframe>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 first_sec_box">
-          <iframe height="223" src="https://www.youtube.com/embed/yAoLSRbwxL8" allow="autoplay; encrypted-media"
-            allowfullscreen></iframe>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 first_sec_box">
-          <iframe height="223" src="https://www.youtube.com/embed/yAoLSRbwxL8" allow="autoplay; encrypted-media"
-            allowfullscreen></iframe>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 first_sec_box">
-          <iframe height="223" src="https://www.youtube.com/embed/yAoLSRbwxL8" allow="autoplay; encrypted-media"
-            allowfullscreen></iframe>
+        <div *ngFor="let video of videos | slice:0:4;" class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          <a (click)="loadPreview(video)">
+            <div class="thumnail-img thump1">
+              <img src={{video.thumb}} />
+            </div>
+          </a>
         </div>
       </div>
       <div class="second_sec">
-        <div class="col-lg-12">
-          <iframe height="465" src="https://www.youtube.com/embed/yAoLSRbwxL8" allow="autoplay; encrypted-media"
-            allowfullscreen></iframe>
+        <div class="col-lg-12" *ngFor="let video of videos | slice:4:5;">
+          <a (click)="loadPreview(video)">
+            <div class="thumnail-img thump1">
+              <img src={{video.thumb}} />
+            </div>
+          </a>
         </div>
       </div>
+      <ngx-smart-modal #videoModal [identifier]="'videoModal'" [customClass]="'medium-modal'">
+        <iframe #rickroll width="550" height="420" src="https://www.youtube.com/embed/yAoLSRbwxL8?autoplay=1"
+          frameborder="0" allowfullscreen allow="autoplay"></iframe>
+      </ngx-smart-modal>
       <div class="text-center Sec_btn">
-        <a href="">See All Videos</a>
+        <a [routerLink]="['/all-videos']">See All Videos</a>
       </div>
     </div>
   </div>

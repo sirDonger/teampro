@@ -19,6 +19,8 @@ import { NgModule } from '@angular/core';
 import { OwlModule } from 'ngx-owl-carousel';
 import { ServicedialogboxComponent } from './landing/servicedialogbox/servicedialogbox.component';
 
+import { NgxSmartModalModule } from 'ngx-smart-modal';
+
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -33,13 +35,14 @@ import { ServicedialogboxComponent } from './landing/servicedialogbox/servicedia
     MatInputModule,
     ReactiveFormsModule,
     OwlModule,
-    RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules }),
+    NgxSmartModalModule.forRoot()
   ],
   entryComponents: [ServicedialogboxComponent],
-  declarations: [AppComponent, LandingComponent, ServicedialogboxComponent],
+  declarations: [AppComponent, LandingComponent, ServicedialogboxComponent,],
 
   providers: [],
 
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
