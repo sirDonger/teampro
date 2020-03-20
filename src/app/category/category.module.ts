@@ -4,11 +4,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { CategoryComponent } from './components/category/category.component';
 import { SubCategoryComponent } from './components/category/sub-category/sub-category.component';
+import { HeaderComponent } from './components/header/header.component';
 
 const routes: Routes = [
-  // { path: '', component: CategoriesComponent },
-  // { path: ':cat_id', component: CategoryComponent },
-
+  { path: 'all', component: CategoriesComponent },
   {
     path: '',
     component: CategoryComponent,
@@ -22,7 +21,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [CategoriesComponent, CategoryComponent, SubCategoryComponent],
+  declarations: [CategoriesComponent, CategoryComponent, SubCategoryComponent, HeaderComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
