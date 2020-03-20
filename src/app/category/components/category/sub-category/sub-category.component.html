@@ -1,0 +1,14 @@
+<div class="content-sec" id="Home-service">
+  <h1>{{catData.title}}</h1>
+  <div class="categories-types">
+    
+    <div *ngFor="let catimage of catData.images">
+      <img [src]="catimage" alt="">
+    </div>
+    
+  </div>
+  <div [innerHTML]="catData.description"></div>
+</div>
+
+
+<!-- {{catData | json }} -->
