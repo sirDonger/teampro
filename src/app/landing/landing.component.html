@@ -151,7 +151,26 @@
     </div>
     <div class="container testimo-sec">
       <div class="center slider responsive">
-        <div *ngFor="let item of items;">
+
+        <ngx-slick-carousel 
+          class="carousel" 
+          #slickModal="slick-carousel" 
+          [config]="slickSlideConfig">
+          <div ngxSlickItem *ngFor="let item of items;" class="slide">
+            <div class="main_sec_test">
+              <div class="top_sec">
+                <p>{{item.content}}</p>
+              </div>
+              <div class="bottom_sec">
+                <span class="bottom_secR">
+                  <span class="text_name">{{item.name}}<br><span>{{item.location}}</span></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </ngx-slick-carousel>
+
+        <!-- <div *ngFor="let item of items;">
           <div class="main_sec_test">
             <div class="top_sec">
               <p>{{item.content}}</p>
@@ -162,7 +181,9 @@
               </span>
             </div>
           </div>
-        </div>
+        </div> -->
+
+
       </div>
     </div>
   </div>
@@ -243,8 +264,34 @@
       <h2>Lastest Blog</h2>
     </div>
     <div class="blg_part">
-      <div class="owl-carousel_main owl-carousel owl-theme">
-        <div class="item">
+
+      <owl-carousel [options]="carouselOptions">
+        <div *ngFor="let blog of blogs" class="item">
+          <div class="firt_blog">
+            <div class="img_sec">
+              <img src="{{blog.thumb}}" alt="profile">
+              <div class="hover_icons">
+                <ul>
+                  <li><a href={{blog.url}}> <img src="../assets/images/plus.png" alt="icon"> </a></li>
+                  <li><a href="#"> <img src="../assets/images/share.png" alt="icon"> </a></li>
+                </ul>
+              </div>
+            </div>
+            <a href={{blog.url}}>
+              <div class="des1">
+                <h5>{{blog.title}}</h5>
+                <div class="blg_icons">
+                  <div class="time"> </div>
+                  <p class="time_p">16 Nov, 2015</p>
+                  <div class="time1"> </div>
+                  <p class="time_p">04:30 PM</p>
+                </div>
+                <p class="common_p">{{blog.description | limitTo:110}}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- <div class="item">
           <div class="firt_blog">
             <div class="img_sec">
               <img src="../assets/images/blog_img1.jpg" alt="profile">
@@ -339,8 +386,10 @@
                 doloremque laudantium, totam rem aperiam...</p>
             </div>
           </div>
-        </div>
-      </div>
+        </div> -->
+    </owl-carousel>
+
+
     </div>
   </div>
 </div>

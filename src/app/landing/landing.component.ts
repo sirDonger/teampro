@@ -1,3 +1,4 @@
+import { iBlog } from './../shared/_models/blog.model';
 import { Categories } from './../shared/_models/category.model';
 import { ApiService } from './../shared/_services/api.service';
 
@@ -92,6 +93,7 @@ export class LandingComponent implements OnInit {
     },
   ];
   videos: iVideo[];
+  blogs: iBlog[];
   urlSafe: any;
   carouselOptions = {
     margin: 25,
@@ -124,6 +126,33 @@ export class LandingComponent implements OnInit {
       }
     }
   }
+
+  slickSlideConfig = {
+    "dots": true,
+    "infinite": false,
+    "centerMode": true,
+    "speed": 300,
+    "slidesToShow": 3,
+    "prevArrow": false,
+    "nextArrow": false,
+    "autoplay": true,
+    "slidesToScroll": 1,
+    "responsive": [{
+        "breakpoint": 991,
+        "settings": {
+          "slidesToShow": 2,
+          "slidesToScroll": 1
+        }
+      },
+      {
+        "breakpoint": 600,
+        "settings": {
+          "slidesToShow": 1,
+          "slidesToScroll": 1
+        }
+      }
+    ]
+  }
   
   categories: Categories[]; 
 
@@ -136,6 +165,7 @@ export class LandingComponent implements OnInit {
   ngOnInit() {
     this.apiService.getAllCategories(true).subscribe(response =>  this.categories = response);
     this.commonApiService.getAllVideos().subscribe(res => this.videos = res);
+    this.commonApiService.getAllBlogs().subscribe(res => this.blogs = res);
   }
 
   openDetailDBx(service): void {
