@@ -155,6 +155,8 @@ export class LandingComponent implements OnInit {
   }
   
   categories: Categories[]; 
+  // projectCounter: {newpost: number, inprogress: number, complete: number} = {newpost : 0, inprogress: 100, complete: 200};  
+  trendingProject; 
 
   constructor(
     public dialog: MatDialog,
@@ -170,6 +172,9 @@ export class LandingComponent implements OnInit {
     this.apiService.getAllCategories(true).subscribe(response =>  this.categories = response);
     this.commonApiService.getAllVideos().subscribe(res => this.videos = res);
     this.commonApiService.getAllBlogs().subscribe(res => this.blogs = res);
+
+    this.apiService.getTrendingProjects().subscribe(response =>  { this.trendingProject = response; });
+    
 
   }
 
