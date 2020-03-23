@@ -3,3 +3,8 @@
 .w100{ width: 100%;}
 .white_bg { background: #fff; }
 .relative{ position: relative; }
+
+
+@media screen and (max-width: 767px){
+ .sm_noMargin { margin: 0; }
+}
