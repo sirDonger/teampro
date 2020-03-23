@@ -140,8 +140,8 @@
 
 
 // 
+::ng-deep body.landing .footer_sec {  background: inherit; }
 .footer_sec {
-  background: inherit;
   padding-top: 80px;
   padding-bottom: 22px;
 
@@ -166,6 +166,8 @@
         margin-bottom: 15px;
       }
     }
+
+
 
     &:after {
       content: "";
@@ -192,10 +194,11 @@
   }
 }
 
+::ng-deep body.landing .footer_sec h2 { color: #151515; }
 .footer_sec h2 {
   font-size: 16px;
   text-transform: uppercase;
-  color: #151515;
+  color: #fe4e1d;
   padding-bottom: 13px;
   background: inherit;
   font-family: 'Montserrat', sans-serif;
@@ -221,9 +224,10 @@
   width: calc(100% - 115px);
 }
 
+::ng-deep body.landing  .footer_video_R p a { color: #050001; }
 .footer_video_R p a {
   text-decoration: none;
-  color: #050001;
+  color: #adadad;
   font-size: 14px;
 
   &:hover {
@@ -231,6 +235,8 @@
     transition: all ease .4s;
   }
 }
+
+::ng-deep body.landing  .footer_sec ul li a{ color: #555555; } 
 
 .footer_sec {
   .footer_video .footer_video_R p i {
@@ -248,7 +254,8 @@
     a {
       margin-left: 16px;
       position: relative;
-      color: #555555;
+      
+      color: #adadad;
 
       &:before {
         background: url(../../../assets/images/arrow_footer_b.png);
@@ -370,3 +377,10 @@ a.common {
     background-position: -43px -19px;
   }
 }
+
+
+::ng-deep body.landing .white_logo{ display: none;}
+::ng-deep body.landing .black_logo{ display: block !important;}
+
+::ng-deep .black_logo{display: none;}
+::ng-deep .white_logo{display: block;}

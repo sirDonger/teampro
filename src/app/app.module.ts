@@ -1,4 +1,5 @@
 
+
 import { AppComponent } from './app.component';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import {
@@ -48,7 +49,13 @@ import { TruncatePipe } from './shared/_pipes/str-limit.pipe';
     SlickCarouselModule
   ],
   entryComponents: [ServicedialogboxComponent],
-  declarations: [AppComponent, LandingComponent, ServicedialogboxComponent, VideosComponent, TruncatePipe],
+  declarations: [
+    AppComponent, 
+    LandingComponent, 
+    ServicedialogboxComponent, 
+    VideosComponent, 
+    TruncatePipe
+  ],
 
   providers: [],
 

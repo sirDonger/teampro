@@ -1,11 +1,19 @@
-.about-banner h2 {
-    color: #000;
-    float: left;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 32px;
-    font-weight: 300;
-    margin-bottom: 10px;
-    width: auto;
-    position: absolute;
+.about-banner {
+    h2 {
+        color: #000;
+        float: left;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 32px;
+        font-weight: 300;
+        margin-bottom: 10px;
+        width: auto;
+        position: absolute;
+    }
+} 
+
+@media screen and (max-width: 991px){
+    .about-banner h2 {
+        font-size: 20px;
+    }
 }

@@ -2,12 +2,12 @@
   <h1>{{catData.title}}</h1>
   <div class="categories-types">
     
-    <div *ngFor="let catimage of catData.images">
+    <div *ngFor="let catimage of catData.images" class="cat_images">
       <img [src]="catimage" alt="">
     </div>
     
   </div>
-  <div [innerHTML]="catData.description"></div>
+  <div class="cat_des" [innerHTML]="catData.description"></div>
 </div>
 
 

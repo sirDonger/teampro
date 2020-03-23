@@ -105,13 +105,14 @@
                     &:focus .f-pro8{ background: url(/assets//images/heavy-stripe.png) no-repeat; }
 
                 }
-                a.active .f-pro1 { background: rgba(0, 0, 0, 0) url("/assets/images/home-stripe.png") no-repeat scroll 0px -44px;}
-                
-            }
-
+                a.active .f-pro1 { background: rgba(0, 0, 0, 0) url("/assets/images/home-stripe.png") no-repeat scroll 0px -44px;}  
+            } // li end 
         }
     }
     
     
-    
+    @media screen and (max-width: 991px){
+        .left-services { padding-right: 15px; }
+        .left-services { margin-bottom: 25px; }
+    }
 }

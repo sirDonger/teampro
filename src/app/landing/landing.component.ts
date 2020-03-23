@@ -163,9 +163,14 @@ export class LandingComponent implements OnInit {
     private apiService: ApiService) { }
 
   ngOnInit() {
+     // Append class to body tag.
+     const body = document.getElementsByTagName('body')[0];
+     body.classList.add('landing');
+
     this.apiService.getAllCategories(true).subscribe(response =>  this.categories = response);
     this.commonApiService.getAllVideos().subscribe(res => this.videos = res);
     this.commonApiService.getAllBlogs().subscribe(res => this.blogs = res);
+
   }
 
   openDetailDBx(service): void {
