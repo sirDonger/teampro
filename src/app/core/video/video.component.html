@@ -1,0 +1,8 @@
+<div>
+  <a (click)="loadPreview()" class="video-blk relative">
+    <div class="thumnail-img thump1">
+      <img class="w100" src={{video.thumb}} />
+    </div>
+  </a>
+  <p *ngIf="showTitle" class="video-title">{{video.title}}</p>
+</div>

@@ -1,3 +1,4 @@
+import { VideoDialogboxComponent } from './core/video/video-dialogbox/video-dialogbox.component';
 
 
 import { AppComponent } from './app.component';
@@ -44,11 +45,11 @@ import { TruncatePipe } from './shared/_pipes/str-limit.pipe';
     MatInputModule,
     ReactiveFormsModule,
     OwlModule,
-    RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules }),
+    RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules, scrollPositionRestoration: 'enabled' }),
     NgxSmartModalModule.forRoot(),
     SlickCarouselModule
   ],
-  entryComponents: [ServicedialogboxComponent],
+  entryComponents: [ServicedialogboxComponent, VideoDialogboxComponent],
   declarations: [
     AppComponent, 
     LandingComponent, 

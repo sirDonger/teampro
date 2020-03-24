@@ -7,6 +7,8 @@ import { SharedModule } from '../shared/shared.module';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { VideoComponent } from './video/video.component';
+import { VideoDialogboxComponent } from './video/video-dialogbox/video-dialogbox.component';
 
 @NgModule({
   imports: [
@@ -17,10 +19,13 @@ import { FooterComponent } from './footer/footer.component';
   ],
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    VideoComponent,
+    VideoDialogboxComponent
   ],
   exports: [
     HeaderComponent,
-    FooterComponent]
+    FooterComponent,
+    VideoComponent]
 })
 export class CoreModule {}

@@ -193,29 +193,21 @@
     <h2 class="text-center">Watch <span>Videos</span> </h2>
     <div class="vid row">
       <div class="first_sec row">
-        <div *ngFor="let video of videos | slice:0:4;" class="col-sm-6 col-md-6 col-lg-6 col-xl-6 first_sec_box">
-          <a (click)="loadPreview(video)" class="video-blk relative">
-            <div class="thumnail-img thump1">
-              <img class="w100" src={{video.thumb}} />
-            </div>
-          </a>
-        </div>
+        <xb-video 
+          class="col-sm-6 col-md-6 col-lg-6 col-xl-6 first_sec_box" 
+          *ngFor="let video of videos | slice:0:4;" 
+          [video]="video">
+        </xb-video>
       </div>
       <div class="second_sec">
-        <div class="col-lg-12" *ngFor="let video of videos | slice:12:13;">
-          <a (click)="loadPreview(video)" class="video-blk relative">
-            <div class="thumnail-img thump1">
-              <img class="w100" src={{video.thumb}} />
-            </div>
-          </a>
-        </div>
+        <xb-video 
+          class="col-lg-12 row" 
+          *ngFor="let video of videos | slice:12:13;" 
+          [video]="video">
+        </xb-video>
       </div>
-      <ngx-smart-modal #videoModal [identifier]="'videoModal'" [customClass]="'medium-modal'">
-        <iframe #rickroll width="550" height="420" src="https://www.youtube.com/embed/yAoLSRbwxL8?autoplay=1"
-          frameborder="0" allowfullscreen allow="autoplay"></iframe>
-      </ngx-smart-modal>
       <div class="text-center Sec_btn">
-        <a href="/all-videos">See All Videos</a>
+        <a [routerLink]="['/all-videos']">See All Videos</a>
       </div>
     </div>
   </div>

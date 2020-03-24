@@ -8,19 +8,13 @@
 <div class="container">
   <div id="how-itworks" class="container-fluid how-it-works">
     <div class="row">
-      <div *ngFor="let video of videos | slice:0:12;" class="col-sm-3">
-        <a (click)="loadPreview(video)">
-          <div class="card">
-            <img class="card-img-top" src="../assets/images/thumb.png" alt="Card image cap">
-          </div>
-        </a>
-        <p class="video-title">Test Title</p>
-      </div>
+      <xb-video 
+        *ngFor="let video of videos | slice:0:12;" 
+        class="col-sm-3" 
+        [video]="video"
+        showTitle="true"
+      ></xb-video>
     </div>
-    <ngx-smart-modal #videoModal [identifier]="'videoModal'" [customClass]="'medium-modal'">
-      <iframe #rickroll width="550" height="420" src="https://www.youtube.com/embed/yAoLSRbwxL8?autoplay=1"
-        frameborder="0" allowfullscreen allow="autoplay"></iframe>
-    </ngx-smart-modal>
   </div>
 </div>
 <div class="download_app">
