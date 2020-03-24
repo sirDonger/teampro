@@ -17,6 +17,12 @@ export const appRoutes: Routes = [
     path: 'category',
     loadChildren: './category/category.module#CategoryModule'
   },
+  {
+   path: 'calander',
+   loadChildren: './calandar-page/calandar-page.module#CalandarPageModule'
+ },
 
+
+  // { path: 'calander', pathMatch: 'full', component: CalanderPageComponent }, // NOT FOUND
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent }
 ];
