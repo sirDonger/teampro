@@ -1,5 +1,5 @@
-@import '../../assets/scss/base/variables';
-@import '../../assets/scss/base/mixins';
+@import '../../../assets/scss/base/variables';
+@import '../../../assets/scss/base/mixins';
 /////////////////
 //TODO: figure out which css here is ONLY for landing page
 ////////////////
@@ -16,7 +16,7 @@ body {
 }
 
 .main_banner {
-  background: url(../../assets/images/banner_img.jpg) top center no-repeat;
+  background: url(../../../assets/images/banner_img.jpg) top center no-repeat;
   min-height: 1070px;
   background-size: cover;
   display: flex;
@@ -163,7 +163,7 @@ body {
 
     &:after {
       content: '';
-      background: url(../../assets/images/read_arrow.png);
+      background: url(../../../assets/images/read_arrow.png);
       background-repeat: no-repeat;
       width: 25px;
       height: 25px;
@@ -234,7 +234,7 @@ body {
       width: 20px;
       left: 0;
       height: 38px;
-      background: url(../../assets/images/pre_arrow.png) no-repeat;
+      background: url(../../../assets/images/pre_arrow.png) no-repeat;
       background-size: 100%;
       content: '';
     }
@@ -263,7 +263,7 @@ body {
       width: 20px;
       right: 0;
       height: 38px;
-      background: url(../../assets/images/next_arrow.png) no-repeat;
+      background: url(../../../assets/images/next_arrow.png) no-repeat;
       background-size: 100%;
       content: '';
     }
@@ -381,7 +381,7 @@ body {
     }
 
     &:after {
-      background: url(../../assets/images/heading_style.png);
+      background: url(../../../assets/images/heading_style.png);
       content: '';
       position: absolute;
       width: 70px;
@@ -435,7 +435,7 @@ body {
         top: 43px;
         height: 13px;
         width: 64px;
-        background: url(../../assets/images/works-arrow.png) no-repeat;
+        background: url(../../../assets/images/works-arrow.png) no-repeat;
         background-size: 100%;
 
         @include breakpoint(medium) {
@@ -493,7 +493,7 @@ body {
     }
 
     &:after {
-      background: url(../../assets/images/heading_style.png);
+      background: url(../../../assets/images/heading_style.png);
       content: '';
       position: absolute;
       width: 70px;
@@ -506,7 +506,7 @@ body {
 }
 
 .category_out {
-  background: url(../../assets/images/category_pattern.jpg);
+  background: url(../../../assets/images/category_pattern.jpg);
   background-repeat: repeat;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 60px 0;
@@ -641,7 +641,7 @@ body {
 }
 
 .security_sec {
-  background: url(../../assets/images/security_bg.jpg);
+  background: url(../../../assets/images/security_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50px 0;
@@ -694,7 +694,7 @@ body {
     }
 
     &:after {
-      background: url(../../assets/images/heading_style.png);
+      background: url(../../../assets/images/heading_style.png);
       content: '';
       position: absolute;
       width: 70px;
@@ -796,7 +796,7 @@ body {
     }
 
     &:after {
-      background: url(../../assets/images/progress_hd.png);
+      background: url(../../../assets/images/progress_hd.png);
       content: '';
       position: absolute;
       width: 70px;
@@ -884,7 +884,7 @@ body {
       &:before {
         position: absolute;
         content: '';
-        background: url(../../assets/images/trending_bg.png);
+        background: url(../../../assets/images/trending_bg.png);
         background-repeat: no-repeat;
         width: 74px;
         height: 55px;
@@ -950,7 +950,7 @@ body {
 }
 
 .time {
-  background: url(../../assets/images/blog_sprite.png);
+  background: url(../../../assets/images/blog_sprite.png);
   background-repeat: no-repeat;
   width: 20px;
   height: 14px;
@@ -961,7 +961,7 @@ body {
 }
 
 .time1 {
-  background: url(../../assets/images/blog_sprite.png);
+  background: url(../../../assets/images/blog_sprite.png);
   background-repeat: no-repeat;
   width: 20px;
   height: 14px;
@@ -1074,7 +1074,7 @@ p.time_p:after {
 }
 
 .download_app {
-  background: url(../../assets/images/download_bg.jpg);
+  background: url(../../../assets/images/download_bg.jpg);
   background-size: cover;
   padding: 50px 0;
 
@@ -1153,7 +1153,7 @@ h6 {
 }
 
 .testimonial_sec {
-  background: url(../../assets/images/testimonials_bg.jpg) left bottom no-repeat;
+  background: url(../../../assets/images/testimonials_bg.jpg) left bottom no-repeat;
   background-size: cover;
   padding: 55px 0 45px 0;
 
@@ -1186,7 +1186,7 @@ h6 {
           left: -29px;
           width: 20px;
           height: 17px;
-          background: url(../../assets/images/quated_gray.png) no-repeat;
+          background: url(../../../assets/images/quated_gray.png) no-repeat;
           background-size: 100%;
         }
       }
@@ -1256,7 +1256,7 @@ h6 {
         color: #fff;
 
         &:before {
-          background: url(../../assets/images/quated_wh.png) no-repeat;
+          background: url(../../../assets/images/quated_wh.png) no-repeat;
           background-size: 100%;
         }
       }
@@ -1273,7 +1273,7 @@ h6 {
 }
 
 .partner_sec {
-  background: url(../../assets/images/market-place-bg.jpg);
+  background: url(../../../assets/images/market-place-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50px 0;

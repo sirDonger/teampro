@@ -1,13 +1,13 @@
-import { iBlog } from './../shared/_models/blog.model';
-import { Categories } from './../shared/_models/category.model';
-import { ApiService } from './../shared/_services/api.service';
+import { iBlog } from './../../shared/_models/blog.model';
+import { Categories } from './../../shared/_models/category.model';
+import { ApiService } from './../../shared/_services/api.service';
 
-import { iVideo } from './../shared/_models/video.model';
-import { CommonApiService } from './../shared/_services/common-api.service';
+import { iVideo } from './../../shared/_models/video.model';
+import { CommonApiService } from './../../shared/_services/common-api.service';
 import { ServicedialogboxComponent } from './servicedialogbox/servicedialogbox.component';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { NgxSmartModalService } from 'ngx-smart-modal';
+ 
 
 @Component({
   selector: 'xb-landing',
@@ -155,12 +155,10 @@ export class LandingComponent implements OnInit {
   }
   
   categories: Categories[]; 
-  // projectCounter: {newpost: number, inprogress: number, complete: number} = {newpost : 0, inprogress: 100, complete: 200};  
   trendingProject; 
 
   constructor(
     public dialog: MatDialog,
-    public ngxSmartModalService: NgxSmartModalService,
     private commonApiService: CommonApiService,
     private apiService: ApiService) { }
 
@@ -180,7 +178,6 @@ export class LandingComponent implements OnInit {
 
   openDetailDBx(service): void {
     const dialogRef = this.dialog.open(ServicedialogboxComponent, {
-      // width: '250px',
       data: service
     });
 
@@ -189,11 +186,6 @@ export class LandingComponent implements OnInit {
     });
   }
 
-  loadPreview(src) {
-    console.log('src', src);
-    this.ngxSmartModalService.getModal('videoModal').open();
-    this.urlSafe = src.url
-    console.log('url', this.urlSafe);
-  }
+  
 
 }

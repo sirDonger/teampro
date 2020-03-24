@@ -36,9 +36,11 @@
         </div>
       </div>
     </div>
+
+
     <br />
     <div [ngSwitch]="view">
-      <ngx-smart-modal #myModal [identifier]="'myModal'" [customClass]="'medium-modal'">
+      <!-- <ngx-smart-modal #myModal [identifier]="'myModal'" [customClass]="'medium-modal'">
         <div *ngIf="modalData">
           <h4>{{modalData.event.title}}</h4>
           <p>{{modalData.event.description}}</p>
@@ -52,7 +54,7 @@
           </select>
         </div>
         <button class="btn btn-primary mt-3" (click)="editEvent(modalData.event, selectedOption)">Update</button>
-      </ngx-smart-modal>
+      </ngx-smart-modal> -->
       <mwl-calendar-month-view *ngSwitchCase="CalendarView.Month" [viewDate]="viewDate" [events]="events"
         [refresh]="refresh" [activeDayIsOpen]="activeDayIsOpen" (dayClicked)="dayClicked($event.day)"
         (eventClicked)="handleEvent('Clicked', $event.event)" (eventTimesChanged)="eventTimesChanged($event)">

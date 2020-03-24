@@ -1,9 +1,11 @@
+import { iMyEvent, eventList } from './../_models/event.model';
 import { User } from 'src/app/shared/_models/user.model';
 import { UserMockData } from './../_models/user.model';
 import { Category, categoriesMocData } from './../_models/category.model';
 import { Injectable } from '@angular/core';
 import { of, Subscription, Observable, BehaviorSubject } from 'rxjs';
 import { timer } from 'rxjs';
+import { delay } from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -64,6 +66,17 @@ export class ApiService {
   editEvent(eventdata) {
     console.log('eventdata', eventdata);
     return eventdata;
+  }
+
+  // function to update the event status 
+  // return updated eventData, and progress status 
+  updateEventStatus(eventData, eventStatus){
+    return of(true).pipe(delay(1000));  
+  }
+
+  // function to get all calendar event from api. 
+  getAllCalendarEvents(){
+    return of(eventList);
   }
 
 }

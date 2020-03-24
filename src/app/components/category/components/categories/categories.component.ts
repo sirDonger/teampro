@@ -1,5 +1,5 @@
-import { Categories } from './../../../shared/_models/category.model';
-import { ApiService } from './../../../shared/_services/api.service';
+import { Categories } from '../../../../shared/_models/category.model';
+import { ApiService } from '../../../../shared/_services/api.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

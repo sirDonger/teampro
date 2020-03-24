@@ -1,5 +1,5 @@
-import { ApiService } from './../../../../shared/_services/api.service';
-import { Category } from './../../../../shared/_models/category.model';
+import { ApiService } from '../../../../../shared/_services/api.service';
+import { Category } from '../../../../../shared/_models/category.model';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
