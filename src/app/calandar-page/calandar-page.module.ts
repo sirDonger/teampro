@@ -7,6 +7,7 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { FormsModule } from '@angular/forms';
 import { FlatpickrModule } from 'angularx-flatpickr';
+import { NgxSmartModalModule } from 'ngx-smart-modal';
 
 
 const routes: Routes = [
@@ -23,7 +24,8 @@ const routes: Routes = [
       provide: DateAdapter,
       useFactory: adapterFactory
     }),
-    FlatpickrModule.forRoot()
+    FlatpickrModule.forRoot(),
+    NgxSmartModalModule.forRoot(),
   ]
 })
 export class CalandarPageModule { }

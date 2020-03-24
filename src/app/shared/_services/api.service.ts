@@ -1,3 +1,5 @@
+import { User } from 'src/app/shared/_models/user.model';
+import { UserMockData } from './../_models/user.model';
 import { Category, categoriesMocData } from './../_models/category.model';
 import { Injectable } from '@angular/core';
 import { of, Subscription, Observable, BehaviorSubject } from 'rxjs';
@@ -50,6 +52,13 @@ export class ApiService {
     return this.projectCounterBS;
 
     
+  }
+
+
+  getAllUsers() {
+    var users: User[] = UserMockData;
+    console.log(' users ', users);
+    return of(users);
   }
 
 

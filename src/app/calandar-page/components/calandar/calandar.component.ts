@@ -1,7 +1,8 @@
-import { Component, OnInit, ChangeDetectionStrategy, ViewChild, TemplateRef  } from '@angular/core'; 
-import { startOfDay, endOfDay, subDays, addDays, endOfMonth, isSameDay, isSameMonth, addHours} from 'date-fns';
+import { Component, OnInit, ChangeDetectionStrategy, ViewChild, TemplateRef } from '@angular/core';
+import { startOfDay, endOfDay, subDays, addDays, endOfMonth, isSameDay, isSameMonth, addHours } from 'date-fns';
 import { Subject } from 'rxjs';
 // import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgxSmartModalService } from 'ngx-smart-modal';
 
 import {
   CalendarEvent,
@@ -9,17 +10,19 @@ import {
   CalendarEventTimesChangedEvent,
   CalendarView
 } from 'angular-calendar';
+import { ApiService } from 'src/app/shared/_services/api.service';
+import { User } from 'src/app/shared/_models/user.model'; 
 
 const colors: any = {
-  red: {
+  meeting: {
     primary: '#ad2121',
     secondary: '#FAE3E3'
   },
-  blue: {
+  work: {
     primary: '#1e90ff',
     secondary: '#D1E8FF'
   },
-  yellow: {
+  appointmet: {
     primary: '#e3bc08',
     secondary: '#FDF1BA'
   }
@@ -38,7 +41,6 @@ export class CalandarComponent implements OnInit {
   CalendarView = CalendarView;
   viewDate: Date = new Date();
   modalData: {
-    action: string;
     event: CalendarEvent;
   };
 
@@ -66,7 +68,7 @@ export class CalandarComponent implements OnInit {
       start: subDays(startOfDay(new Date()), 1),
       end: addDays(new Date(), 1),
       title: 'A 3 day event',
-      color: colors.red,
+      color: colors.meeting,
       actions: this.actions,
       allDay: true,
       resizable: {
@@ -78,21 +80,21 @@ export class CalandarComponent implements OnInit {
     {
       start: startOfDay(new Date()),
       title: 'An event with no end date',
-      color: colors.yellow,
+      color: colors.appointmet,
       actions: this.actions
     },
     {
       start: subDays(endOfMonth(new Date()), 3),
       end: addDays(endOfMonth(new Date()), 3),
       title: 'A long event that spans 2 months',
-      color: colors.blue,
+      color: colors.work,
       allDay: true
     },
     {
       start: addHours(startOfDay(new Date()), 2),
       end: addHours(new Date(), 2),
       title: 'A draggable and resizable event',
-      color: colors.yellow,
+      color: colors.work,
       actions: this.actions,
       resizable: {
         beforeStart: true,
@@ -102,12 +104,14 @@ export class CalandarComponent implements OnInit {
     }
   ];
   activeDayIsOpen: boolean = true;
-
+  users: User[];
   constructor(
     // private modal: NgbModal
-    ) {}
+    private apiService: ApiService, public ngxSmartModalService: NgxSmartModalService
+  ) { }
 
   ngOnInit() {
+    this.apiService.getAllUsers().subscribe(response => this.users = response);
   }
 
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
@@ -143,7 +147,10 @@ export class CalandarComponent implements OnInit {
   }
 
   handleEvent(action: string, event: CalendarEvent): void {
-    this.modalData = { event, action };
+    console.log("clicked", event);
+    this.modalData = { event };
+    console.log("data", this.modalData.event.title);
+    this.ngxSmartModalService.getModal('myModal').open();
     // this.modal.open(this.modalContent, { size: 'lg' });
   }
 
@@ -154,7 +161,7 @@ export class CalandarComponent implements OnInit {
         title: 'New event',
         start: startOfDay(new Date()),
         end: endOfDay(new Date()),
-        color: colors.red,
+        color: colors.meeting,
         draggable: true,
         resizable: {
           beforeStart: true,
