@@ -60,6 +60,10 @@ export class ApiService {
     console.log(' users ', users);
     return of(users);
   }
-
+  
+  editEvent(eventdata) {
+    console.log('eventdata', eventdata);
+    return eventdata;
+  }
 
 }

@@ -11,7 +11,11 @@ import {
   CalendarView
 } from 'angular-calendar';
 import { ApiService } from 'src/app/shared/_services/api.service';
-import { User } from 'src/app/shared/_models/user.model'; 
+import { User } from 'src/app/shared/_models/user.model';
+
+interface MyEvent extends CalendarEvent {
+  description?: string;
+}
 
 const colors: any = {
   meeting: {
@@ -33,6 +37,7 @@ const colors: any = {
   templateUrl: './calandar.component.html',
   styleUrls: ['./calandar.component.scss']
 })
+
 export class CalandarComponent implements OnInit {
 
   @ViewChild('modalContent') modalContent: TemplateRef<any>;
@@ -63,11 +68,12 @@ export class CalandarComponent implements OnInit {
   ];
 
   refresh: Subject<any> = new Subject();
-  events: CalendarEvent[] = [
+  events: MyEvent[] = [
     {
       start: subDays(startOfDay(new Date()), 1),
       end: addDays(new Date(), 1),
       title: 'A 3 day event',
+      description: 'Test description of A 3 day event',
       color: colors.meeting,
       actions: this.actions,
       allDay: true,
@@ -80,6 +86,7 @@ export class CalandarComponent implements OnInit {
     {
       start: startOfDay(new Date()),
       title: 'An event with no end date',
+      description: 'Test description of An event with no end date',
       color: colors.appointmet,
       actions: this.actions
     },
@@ -87,6 +94,7 @@ export class CalandarComponent implements OnInit {
       start: subDays(endOfMonth(new Date()), 3),
       end: addDays(endOfMonth(new Date()), 3),
       title: 'A long event that spans 2 months',
+      description: 'Test description of A long event that spans 2 months',
       color: colors.work,
       allDay: true
     },
@@ -94,6 +102,7 @@ export class CalandarComponent implements OnInit {
       start: addHours(startOfDay(new Date()), 2),
       end: addHours(new Date(), 2),
       title: 'A draggable and resizable event',
+      description: 'Test description of A draggable and resizable event',
       color: colors.work,
       actions: this.actions,
       resizable: {
@@ -104,6 +113,7 @@ export class CalandarComponent implements OnInit {
     }
   ];
   activeDayIsOpen: boolean = true;
+  selectedOption: string = "";
   users: User[];
   constructor(
     // private modal: NgbModal
@@ -159,6 +169,7 @@ export class CalandarComponent implements OnInit {
       ...this.events,
       {
         title: 'New event',
+        description: 'Description of New event',
         start: startOfDay(new Date()),
         end: endOfDay(new Date()),
         color: colors.meeting,
@@ -181,6 +192,13 @@ export class CalandarComponent implements OnInit {
 
   closeOpenMonthViewDay() {
     this.activeDayIsOpen = false;
+  }
+
+  editEvent(event, option) {
+    console.log('editEvent', event);
+    console.log('option', option);
+    this.apiService.editEvent(event);
+
   }
 
 
