@@ -21,7 +21,6 @@ import { NgModule } from '@angular/core';
 
 //  modules 
 import { OwlModule } from 'ngx-owl-carousel';
-import { NgxSmartModalModule } from 'ngx-smart-modal';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 // material module 
@@ -57,7 +56,6 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
     ReactiveFormsModule,
     OwlModule,
     RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules, scrollPositionRestoration: 'enabled' }),
-    NgxSmartModalModule.forRoot(),
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory
