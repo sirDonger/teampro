@@ -83,4 +83,5 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

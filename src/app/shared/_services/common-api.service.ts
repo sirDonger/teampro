@@ -7,6 +7,7 @@ import { BlogMockData, iBlog } from './../_models/blog.model';
 @Injectable({
   providedIn: 'root'
 })
+
 export class CommonApiService {
 
   constructor() { }
@@ -23,6 +24,5 @@ export class CommonApiService {
     console.log(' blogsList ', blogsList);
     return of(blogsList);
   }
-
 
 }

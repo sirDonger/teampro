@@ -15,9 +15,6 @@ const routes: Routes = [
       {path: ':cat_id', component: SubCategoryComponent},  
     ]
   },
-
-
-
 ];
 
 @NgModule({
@@ -27,4 +24,5 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ]
 })
+
 export class CategoryModule { }

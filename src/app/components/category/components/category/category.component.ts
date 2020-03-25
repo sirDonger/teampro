@@ -12,14 +12,11 @@ export class CategoryComponent implements OnInit {
 
   openMenu: string[] = ['home_services'];
   categoriesList: Categories = [];
-  subCatId: number;
-  
+  subCatId: number;  
   
   constructor( private apiService: ApiService, private route: ActivatedRoute) { }
 
-
   ngOnInit() {
-
     
    if ( this.route.firstChild ){
     this.route.firstChild.params.subscribe(params => this.subCatId = (params.cat_id)?(parseInt(params.cat_id)):0);

@@ -7,7 +7,6 @@ import { Component, OnInit, Inject } from '@angular/core';
   styleUrls: ['./servicedialogbox.component.scss']
 })
 export class ServicedialogboxComponent implements OnInit {
-
  
   constructor(
     public dialogRef: MatDialogRef<ServicedialogboxComponent>,

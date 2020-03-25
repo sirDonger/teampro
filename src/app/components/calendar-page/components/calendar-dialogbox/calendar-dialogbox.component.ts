@@ -7,6 +7,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   templateUrl: './calendar-dialogbox.component.html',
   styleUrls: ['./calendar-dialogbox.component.scss']
 })
+
 export class CalendarDialogboxComponent implements OnInit {
   successUpdated: boolean;
   constructor(
@@ -26,6 +27,5 @@ export class CalendarDialogboxComponent implements OnInit {
 
       });
   }
-
 
 }

@@ -37,7 +37,6 @@ export class ApiService {
 
   }
 
-
   getCategory(catid: number) {
     let categoryList: Category[] = categoriesMocData;
     return of(categoryList.find(x => x.id === catid));
@@ -55,10 +54,7 @@ export class ApiService {
       });
     }
     return this.projectCounterBS;
-
-
   }
-
 
   getAllUsers() {
     var users: User[] = UserMockData;
@@ -82,9 +78,7 @@ export class ApiService {
     var categoriesData: categoryData = CategoryMockData;
     console.log(' catsData ', categoriesData);
     return of(categoriesData);
-
   }
-
 
   editEvent(eventdata) {
     console.log('eventdata', eventdata);
