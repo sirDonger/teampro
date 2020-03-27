@@ -1,4 +1,25 @@
 .calander_sec{ margin: 20px 0; }
+.calendar-container{
+  margin-top: 15px;
+  height: 690px;
+  width : 800px;
+  padding: 30px;
+  background: #ff5312;
+  position: reletive;
+}
+.calendar{
+  width: 800px;
+  height: 700px;
+  padding: 15px 0;
+max-width: 1200px;
+}
+.appointment{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 400px;
+  color: white;
+  font-weight: bold;
+}
 
 .select{
   display: block;
@@ -13,4 +34,36 @@
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-options{
+  .active{
+    background-color:red;
+  }
+}
+.dateRow{
+  position: absolute;
+  margin-top: 250px;
+  color: #fff;
+}
+
+.btn-row{
+  background-color: #fff;
+    border: solid 1px #fff;
+    border-radius: 20px;
+  
+}
+.navigationDate{
+  display: flex;
+  justify-content: space-around;
+}
+.arrow{
+  height: 40px;
+  border: 1px solid #ff5312;
+  width: 40px;
+  color:#ff5312 ;
+  font-weight: bold;
+  padding-left: 10px;
+  border-radius: 3px;
+  font-size: 1.5rem;
 }
